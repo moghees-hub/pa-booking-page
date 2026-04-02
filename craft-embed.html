@@ -39,10 +39,23 @@ body .content-wrapper * {
     }
 }
 
-.pa-booking-page * {
+.pa-booking-page > *,
+.pa-booking-page .container,
+.pa-booking-page .container * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.pa-booking-page .elfsight-wrap,
+.pa-booking-page .elfsight-wrap * {
+    margin: revert !important;
+    padding: revert !important;
+    box-sizing: revert !important;
+}
+.pa-booking-page .elfsight-wrap {
+    margin: 48px auto 0 !important;
+    padding: 0 20px !important;
+    max-width: 1200px !important;
 }
 
 .pa-booking-page {

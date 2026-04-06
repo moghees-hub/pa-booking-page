@@ -162,6 +162,21 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 .pricing__btn:hover{transform:translateY(-2px);box-shadow:0 8px 36px rgba(127,200,56,0.4)}
 .pricing__btn--outline{background:var(--white);border:2px solid var(--border);color:var(--text);box-shadow:none}
 .pricing__btn--outline:hover{border-color:var(--green);color:var(--green);box-shadow:0 4px 20px rgba(127,200,56,0.15)}
+.pricing__btn-sub{font-size:11px;color:var(--gray);font-weight:500;margin-top:8px;letter-spacing:.01em}
+.pricing__features li strong{color:var(--text);font-weight:700}
+
+/* TIER SELECTOR */
+.tier-select{background:var(--light);padding:50px 0;text-align:center;border-bottom:1px solid var(--border)}
+.tier-select .container{max-width:900px;margin:0 auto;padding:0 20px}
+.tier-select h2{font-size:clamp(24px,3.5vw,38px);font-weight:900;letter-spacing:-.025em;color:var(--text);line-height:1.1;margin-bottom:12px}
+.tier-select h2 em{font-style:normal;color:var(--green-dark)}
+.tier-select__sub{font-size:16px;color:var(--text-secondary);margin-bottom:36px}
+.tier-select__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:left}
+.tier-select__item{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:24px;transition:transform .3s,box-shadow .3s}
+.tier-select__item:hover{transform:translateY(-3px);box-shadow:0 8px 32px rgba(0,0,0,0.06)}
+.tier-select__label{font-size:13px;font-weight:800;color:var(--green);text-transform:uppercase;letter-spacing:.1em;margin-bottom:8px}
+.tier-select__text{font-size:14px;color:var(--text-secondary);line-height:1.6}
+@media(max-width:768px){.tier-select__grid{grid-template-columns:1fr}}
 
 /* BOTTOM CTA */
 .bottom-cta{background:var(--white);padding:50px 0;text-align:center;border-top:1px solid var(--border)}
@@ -304,6 +319,28 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
 </section>
 
 
+<!-- TIER SELECTOR -->
+<section class="tier-select">
+  <div class="container" data-reveal>
+    <h2>Which Programme Is <em>Right For You?</em></h2>
+    <p class="tier-select__sub">Every tier gets results. The difference is how much support you want along the way.</p>
+    <div class="tier-select__grid">
+      <div class="tier-select__item">
+        <div class="tier-select__label">Lite</div>
+        <p class="tier-select__text">Self-motivated and time-poor? You know how to stay consistent — you just need the right plan and periodic check-ins to keep you on track.</p>
+      </div>
+      <div class="tier-select__item">
+        <div class="tier-select__label">Premium</div>
+        <p class="tier-select__text">Want faster results and more accountability? You thrive with weekly feedback, direct coach access, and a team that keeps you moving forward.</p>
+      </div>
+      <div class="tier-select__item">
+        <div class="tier-select__label">Elite</div>
+        <p class="tier-select__text">Operating at the highest standard? You want direct access to a head coach, on-demand strategy calls, and nothing left to chance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="pricing" id="pricing">
   <div class="container" data-reveal>
     <h2>Experience <em>World-Class Coaching</em></h2>
@@ -317,13 +354,14 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">A streamlined coaching option for clients who can stay consistent without constant oversight. Simple structure. Proven system. Solid results.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Bi-weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Bi-weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Coach WhatsApp support - Monday, Wednesday, Saturday</li>
+          <li>1-1 Coach WhatsApp support - <strong>Monday, Wednesday, Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community Group Access</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn pricing__btn--outline">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
       <div class="pricing__card pricing__card--featured">
@@ -335,15 +373,16 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">Our most in-demand coaching experience designed for clients who want faster results and elevated support.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Coach WhatsApp support Monday-Saturday</li>
+          <li>1-1 Coach WhatsApp support <strong>Monday-Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community group access</li>
-          <li>Mental health/performance support (licensed psychologist)</li>
-          <li>Zoom catch up calls every 6 weeks road mapping your future goals, expectations and progress</li>
+          <li><strong>Mental health/performance support</strong> (licensed psychologist)</li>
+          <li><strong>Zoom catch up calls every 6 weeks</strong> road mapping your future goals, expectations and progress</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
       <div class="pricing__card">
@@ -354,15 +393,16 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">Our most advanced level of coaching for clients who operate at the highest standard. Work directly with our top head coaches.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Head Coach WhatsApp support Monday-Saturday</li>
+          <li>1-1 <strong>Head Coach</strong> WhatsApp support <strong>Monday-Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community group access</li>
-          <li>Mental health/performance support (licensed psychologist)</li>
-          <li>On-demand Zoom calls as often as needed to assess progress, adjust strategy, and map out your next steps as needed in real time</li>
+          <li><strong>Mental health/performance support</strong> (licensed psychologist)</li>
+          <li><strong>On-demand Zoom calls</strong> — assess progress, adjust strategy, and plan next steps in real time</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn pricing__btn--outline">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
     </div>
@@ -536,13 +576,14 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">A streamlined coaching option for clients who can stay consistent without constant oversight. Simple structure. Proven system. Solid results.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Bi-weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Bi-weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Coach WhatsApp support - Monday, Wednesday, Saturday</li>
+          <li>1-1 Coach WhatsApp support - <strong>Monday, Wednesday, Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community Group Access</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn pricing__btn--outline">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
       <div class="pricing__card pricing__card--featured">
@@ -554,15 +595,16 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">Our most in-demand coaching experience designed for clients who want faster results and elevated support.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Coach WhatsApp support Monday-Saturday</li>
+          <li>1-1 Coach WhatsApp support <strong>Monday-Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community group access</li>
-          <li>Mental health/performance support (licensed psychologist)</li>
-          <li>Zoom catch up calls every 6 weeks road mapping your future goals, expectations and progress</li>
+          <li><strong>Mental health/performance support</strong> (licensed psychologist)</li>
+          <li><strong>Zoom catch up calls every 6 weeks</strong> road mapping your future goals, expectations and progress</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
       <div class="pricing__card">
@@ -573,15 +615,16 @@ body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;fo
         <p class="pricing__desc">Our most advanced level of coaching for clients who operate at the highest standard. Work directly with our top head coaches.</p>
         <ul class="pricing__features">
           <li>Bespoke nutrition program, training program, step targets, cardio/conditioning routines</li>
-          <li>Weekly video check-ins with feedback and explanation of adjustments</li>
+          <li><strong>Weekly</strong> video check-ins with feedback and explanation of adjustments</li>
           <li>Supplements/ TRT/ Peptides Support &amp; Guidance</li>
-          <li>1-1 Head Coach WhatsApp support Monday-Saturday</li>
+          <li>1-1 <strong>Head Coach</strong> WhatsApp support <strong>Monday-Saturday</strong></li>
           <li>Exercise Technique/Form video analysis feedback</li>
           <li>Private Community group access</li>
-          <li>Mental health/performance support (licensed psychologist)</li>
-          <li>On-demand Zoom calls as often as needed to assess progress, adjust strategy, and map out your next steps as needed in real time</li>
+          <li><strong>Mental health/performance support</strong> (licensed psychologist)</li>
+          <li><strong>On-demand Zoom calls</strong> — assess progress, adjust strategy, and plan next steps in real time</li>
         </ul>
         <a href="javascript:void(0);" onclick="openBookingModal()" class="pricing__btn pricing__btn--outline">Book A Call</a>
+        <p class="pricing__btn-sub">Free 30-min strategy call — no obligation</p>
       </div>
 
     </div>
